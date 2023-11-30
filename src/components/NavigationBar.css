@@ -1,0 +1,15 @@
+#navigation-bar div {
+  width: 100%;
+  background-color: red;
+}
+
+
+a {
+  float: left;
+  display: inline;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: orange;
+}

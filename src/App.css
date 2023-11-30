@@ -1,3 +1,27 @@
 .App {
   text-align: center;
 }
+
+#app-header {
+  width: 100%;
+  min-height: 5rem;
+  background-color: #F6F2EF;
+}
+
+#navigation-bar {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+#app-body {
+  width: 100%;
+  min-height: 25rem;
+  background-color: #D9CFC5;
+
+}
+
+#app-footer {
+  width: 100%;
+  min-height: 5rem;
+  background-color: #F6F2EF;
+}
