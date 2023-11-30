@@ -1,15 +1,25 @@
-#navigation-bar div {
+#navigation-bar {
   width: 100%;
-  background-color: red;
+  background-color: white;
+  padding: 1%;
+  overflow: hidden;
+  margin: 0.5% 0%;
 }
 
-
-a {
-  float: left;
+#navigation-bar a {
   display: inline;
-  color: white;
+  margin: 2%;
+  color: #000000;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  background-color: orange;
+  cursor: pointer
+}
+
+#navigation-bar a:first-child {
+  margin-left: 0; /* Remove left margin for the first link */
+}
+
+#navigation-bar a:hover {
+  background-color: #F6F2EF; /* Change the background color on hover */
 }

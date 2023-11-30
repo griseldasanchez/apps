@@ -9,8 +9,7 @@ function App() {
         Header 
       </header>
       
-      <div id="navigation-bar">
-        Navigation Bar
+      <div>
         <NavigationBar />
       </div>
       
