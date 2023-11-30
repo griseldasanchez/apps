@@ -8,9 +8,10 @@ import { createBrowserRouter,
 } from 'react-router-dom';
 
 // Components
-import Home from './components/Home';
+import Home from './components/Home/Home';
 import About from './components/About';
 import Recipes from'./components/Recipes';
+// eslint-disable-next-line
 import NavigationBar from './components/NavigationBar';
 
 // Styles
@@ -52,7 +53,6 @@ function App() {
         <header id="app-header">Header</header>
 
         <body id="app-body">
-          Body
           <div>
             {/* <NavigationBar /> */}
             <RouterProvider router={router} />        

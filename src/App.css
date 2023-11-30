@@ -4,7 +4,8 @@
 
 #app-header {
   width: 100%;
-  min-height: 5rem;
+  min-height: 2rem;
+  text-align: middle;
   background-color: #F6F2EF;
 }
 
@@ -15,9 +16,7 @@
 
 #app-body {
   width: 100%;
-  min-height: 25rem;
   background-color: #D9CFC5;
-
 }
 
 #app-footer {
