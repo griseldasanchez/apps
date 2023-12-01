@@ -41,11 +41,16 @@
   grid-template-columns: 33% 34% 33%;  
 }
 
-.recipes-grid-container > div {
-  border: 1px solid black;
-  margin: 1px;
-  text-align: center;
-}
+  .recipes-grid-container > div {
+    border: 2px solid black;
+    margin: 1px;
+    text-align: center;
+  }
+
+  .recipes-grid-container .recipe-link {
+    text-decoration: none;
+    color: inherit;
+  }
 
   .recipes-grid-container .recipe-item img {
     max-width: 90%;

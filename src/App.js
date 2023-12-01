@@ -12,6 +12,7 @@ import Home from './components/Home/Home';
 import About from './components/About';
 import RecipesApp from'./components/Recipes/RecipesApp';
 import Footer from './components/Footer/Footer';
+import RecipeDetails from './components/Recipes/RecipeDetails';
 // eslint-disable-next-line
 import NavigationBar from './components/NavigationBar';
 
@@ -44,6 +45,7 @@ function App() {
         <Route index element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/recipes-app" element={<RecipesApp />}></Route>
+        <Route path="/recipe-details" element={<RecipeDetails />}></Route>
       </Route>
     )
   )
