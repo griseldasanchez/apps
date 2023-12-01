@@ -38,11 +38,11 @@ function App() {
       <div id="App">
         <header id="app-header">Header</header>
 
-        <body id="app-body">
+        <div id="app-body">
           <div>
             <RouterProvider router={router} />        
           </div>
-        </body>
+        </div>
 
         <footer id="app-footer">
           <Footer />
