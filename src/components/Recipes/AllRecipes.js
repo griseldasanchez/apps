@@ -1,17 +1,21 @@
 import React from 'react';
-import './AllRecipes.css';
+
+// Components
 import RecipeTile from './RecipeTile';
 
-export default function AllRecipes() {
+// Styles
+import './AllRecipes.css';
+
+export default function AllRecipes(state) {
   return (
     <div>
       <div className="search-header-name">Recipes:</div>
       <div className="recipes-grid-container">
-        <RecipeTile />
-        <RecipeTile />
-        <RecipeTile />
-        <RecipeTile />
-        <RecipeTile />
+        <RecipeTile information={state}/>
+        <RecipeTile information={state}/>
+        <RecipeTile information={state}/>
+        <RecipeTile information={state}/>
+        <RecipeTile information={state}/>
     </div>
     </div>
   );
