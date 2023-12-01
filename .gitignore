@@ -27,4 +27,8 @@ yarn-error.log*
 
 #Firebase
 .env
-src/firebase.js
+utils
+utils/connect.js
+utils/dataLoad.js
+utils/firebase.js
+utils/helpers.js

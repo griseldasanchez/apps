@@ -21,10 +21,8 @@ import NavigationBar from './components/NavigationBar';
 import './App.css';
 
 // Database
-import { db } from './firebase';
-import { useState, useEffect } from "react";
+import { db } from './utils/firebase';
 import { getDatabase, ref, set } from "firebase/database";
-
 
 function App() {
 
@@ -39,23 +37,18 @@ function App() {
     )
   );
 
-  let writeData = (userId, recipeName, cuisine, description, imageURL, ingredients, instructions) => {
+  let writeData = (recipeId, recipeName, cuisine, description, imageURL, ingredients, instructions) => {
     const db = getDatabase();
-    const reference = ref(db, 'recipe/' + userId);
+    const reference = ref(db, 'recipe/' + recipeId);
      set(reference, {
       recipeName: recipeName,
       cuisine: cuisine,
-      dateCreated: new Date(),
       description: description,
       imageURL: imageURL,
-      ingredients: [],
-      instructions: [] 
+      ingredients: ingredients,
+      instructions: instructions
     })
-    console.log('running writeData');
    }
-
-  //  writeData("00001", "Green Enchiladas", "This is a delicious Mexican dish.", "myImageURL");
-
 
   return (
     
