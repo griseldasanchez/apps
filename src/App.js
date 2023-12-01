@@ -19,8 +19,64 @@ import NavigationBar from './components/NavigationBar';
 // Styles
 import './App.css';
 
+// Database
+import { db } from './firebase';
+import { useState, useEffect } from "react";
+import { getDatabase, ref, set } from "firebase/database";
 
-const Root = () => {
+
+
+function App() {
+
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<Root /> }>
+        <Route index element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/recipes-app" element={<RecipesApp />}></Route>
+        <Route path="/recipe-details" element={<RecipeDetails />}></Route>
+      </Route>
+    )
+  );
+
+  let writeData = (userId, recipeName, cuisine, description, imageURL, ingredients, instructions) => {
+    const db = getDatabase();
+    const reference = ref(db, 'recipe/' + userId);
+     set(reference, {
+      recipeName: recipeName,
+      cuisine: cuisine,
+      dateCreated: new Date(),
+      description: description,
+      imageURL: imageURL,
+      ingredients: [],
+      instructions: [] 
+    })
+    console.log('running writeData');
+   }
+
+  //  writeData("00001", "Green Enchiladas", "This is a delicious Mexican dish.", "myImageURL");
+
+  return (
+    
+      <div id="App">
+        <header id="app-header">Header <br />
+        </header>
+
+        <div id="app-body">
+          <div>
+            <RouterProvider router={router} />        
+          </div>
+        </div>
+
+        <footer id="app-footer">
+          <Footer />
+        </footer>
+      </div>
+
+  );
+}
+
+export const Root = () => {
   return (
     <>
     {/* Navigation Bar Routes */}
@@ -35,39 +91,6 @@ const Root = () => {
       </div>
     </>
   )
-}
-
-function App() {
-
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route path="/" element={<Root /> }>
-        <Route index element={<Home />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/recipes-app" element={<RecipesApp />}></Route>
-        <Route path="/recipe-details" element={<RecipeDetails />}></Route>
-      </Route>
-    )
-  )
-
-  return (
-    
-      <div id="App">
-        <header id="app-header">Header</header>
-
-        <body id="app-body">
-          <div>
-            {/* <NavigationBar /> */}
-            <RouterProvider router={router} />        
-          </div>
-        </body>
-
-        <footer id="app-footer">
-          <Footer />
-        </footer>
-      </div>
-
-  );
 }
 
 export default App;
