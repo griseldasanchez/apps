@@ -1,0 +1,22 @@
+#home-page {
+  border: 1px solid blue;
+}
+
+.home-header {
+  border: 1px dashed red;
+  display: flex;
+}
+
+.home-header .profile-picture {
+  border: 1px solid green;
+  width: 25%;
+  margin: 1%;
+  padding: 10%;
+}
+
+.home-header .home-information {
+  border: 1px solid green;
+  width: 75%;
+  margin: 1%;
+  padding: 10%;
+}

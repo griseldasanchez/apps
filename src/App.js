@@ -8,9 +8,12 @@ import { createBrowserRouter,
 } from 'react-router-dom';
 
 // Components
-import Home from './components/Home';
+import Home from './components/Home/Home';
 import About from './components/About';
-import Recipes from'./components/Recipes';
+import RecipesApp from'./components/Recipes/RecipesApp';
+import Footer from './components/Footer/Footer';
+import RecipeDetails from './components/Recipes/RecipeDetails';
+// eslint-disable-next-line
 import NavigationBar from './components/NavigationBar';
 
 // Styles
@@ -41,25 +44,27 @@ function App() {
       <Route path="/" element={<Root /> }>
         <Route index element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
-        <Route path="/recipes-app" element={<Recipes />}></Route>
+        <Route path="/recipes-app" element={<RecipesApp />}></Route>
+        <Route path="/recipe-details" element={<RecipeDetails />}></Route>
       </Route>
     )
   )
 
   return (
     
-      <div className="App">
+      <div id="App">
         <header id="app-header">Header</header>
 
         <body id="app-body">
-          Body
           <div>
             {/* <NavigationBar /> */}
             <RouterProvider router={router} />        
           </div>
         </body>
 
-        <footer id="app-footer">Footer</footer>
+        <footer id="app-footer">
+          <Footer />
+        </footer>
       </div>
 
   );

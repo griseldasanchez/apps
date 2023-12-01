@@ -1,0 +1,13 @@
+#footer {
+  border: 2px solid black;
+}
+
+.footer-columns {
+  display: flex;
+}
+
+.footer-column {
+  border: 1px dashed orange;
+  margin: 1%;
+  width: 50%;
+}
