@@ -6,12 +6,12 @@ export default function Footer() {
    <div id="footer">
       <div className="footer-columns">
         <div className="footer-column">
-          <p>Sites <br /></p>
+          Sites <br />
           LinkedIn <br />
           Github
         </div>
         <div className="footer-column">
-          <p>Contact <br /></p>
+          Contact <br />
           Name <br />
           Email <br />
         </div>

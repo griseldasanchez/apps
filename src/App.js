@@ -11,6 +11,7 @@ import { createBrowserRouter,
 import Home from './components/Home/Home';
 import About from './components/About';
 import RecipesApp from'./components/Recipes/RecipesApp';
+import { dataLoader } from './components/Recipes/RecipesApp';
 import Footer from './components/Footer/Footer';
 import RecipeDetails from './components/Recipes/RecipeDetails';
 // eslint-disable-next-line
@@ -25,7 +26,6 @@ import { useState, useEffect } from "react";
 import { getDatabase, ref, set } from "firebase/database";
 
 
-
 function App() {
 
   const router = createBrowserRouter(
@@ -33,7 +33,7 @@ function App() {
       <Route path="/" element={<Root /> }>
         <Route index element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
-        <Route path="/recipes-app" element={<RecipesApp />}></Route>
+        <Route path="/recipes-app" element={<RecipesApp />} loader={dataLoader}></Route>
         <Route path="/recipe-details" element={<RecipeDetails />}></Route>
       </Route>
     )
@@ -55,6 +55,7 @@ function App() {
    }
 
   //  writeData("00001", "Green Enchiladas", "This is a delicious Mexican dish.", "myImageURL");
+
 
   return (
     
