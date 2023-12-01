@@ -10,7 +10,8 @@ import { createBrowserRouter,
 // Components
 import Home from './components/Home/Home';
 import About from './components/About';
-import Recipes from'./components/Recipes';
+import Recipes from'./components/Recipes/Recipes';
+import Footer from './components/Footer/Footer';
 // eslint-disable-next-line
 import NavigationBar from './components/NavigationBar';
 
@@ -59,7 +60,9 @@ function App() {
           </div>
         </body>
 
-        <footer id="app-footer">Footer</footer>
+        <footer id="app-footer">
+          <Footer />
+        </footer>
       </div>
 
   );

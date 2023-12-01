@@ -6,7 +6,7 @@ import './Home.css';
 export default function Home() {
   return (
    <div id="home-page">
-      <div>This is the Home Page.</div>
+      <p>This is the Home Page.</p>
       <div className="home-header">
         <div className='home-information'>
           Information section. 
@@ -14,6 +14,9 @@ export default function Home() {
         <div className="profile-picture">
           Profile Picture.
         </div>
+      </div>
+      <div>
+        <p>Articles and/or Documentation</p>
       </div>
    </div>
   )
