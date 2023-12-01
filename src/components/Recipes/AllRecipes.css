@@ -1,0 +1,53 @@
+/* Recipes App Container */
+#recipes-app {
+  /* width: 100%; */
+  overflow-x: hidden; /* hides horizontal scrollbar */
+  overflow-y: hidden; /* hides vertical scrollbar */
+  padding: 1%;
+  border: 3px dashed purple;
+}
+
+/* Search Bar for Recipes */
+#search-recipes {
+  border: 1px solid blue;
+}
+
+  .recipes-searchbar {
+    /* border: 1px solid black; */
+    margin: 0% 15%;
+    display: flex;
+    padding: 1%;
+  }
+
+  .recipes-searchbar .searchbar {
+    background-color: lightblue;
+    width: 75%;
+  }
+
+  .recipes-searchbar .searchbar-button {
+    background-color: lightgoldenrodyellow;
+    width: 25%;
+  }
+
+  .search-header-name {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  
+/* Recipes Grid Container List */ 
+.recipes-grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 33% 34% 33%;  
+}
+
+.recipes-grid-container > div {
+  border: 1px solid black;
+  margin: 1px;
+  text-align: center;
+}
+
+  .recipes-grid-container .recipe-item img {
+    max-width: 90%;
+    border-radius: 10px;
+  }

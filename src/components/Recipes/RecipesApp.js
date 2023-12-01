@@ -1,16 +1,19 @@
 import React from 'react';
 import SearchRecipes from './SearchRecipes';
+import AllRecipes from './AllRecipes';
+import './AllRecipes.css';
 
-
-export default function Recipes() {
+export default function RecipesApp() {
   return (
-   <div>
-      <div>This is the for the Recipes App.</div>
-      <p>Features Needed</p>
+   <div id="recipes-app">
+      {/* <div>This is the for the Recipes App.</div> */}
+      {/* <p>Features Needed</p> */}
 
       <SearchRecipes/>
 
       <div>List of recipes by category</div>
+      <AllRecipes />
+
         <div>Recipe Component</div>
         <div>Navigation bar within recipe - edit, delete, save, share</div>
           <li>Name</li>

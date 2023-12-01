@@ -10,7 +10,7 @@ import { createBrowserRouter,
 // Components
 import Home from './components/Home/Home';
 import About from './components/About';
-import Recipes from'./components/Recipes/Recipes';
+import RecipesApp from'./components/Recipes/RecipesApp';
 import Footer from './components/Footer/Footer';
 // eslint-disable-next-line
 import NavigationBar from './components/NavigationBar';
@@ -43,14 +43,14 @@ function App() {
       <Route path="/" element={<Root /> }>
         <Route index element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
-        <Route path="/recipes-app" element={<Recipes />}></Route>
+        <Route path="/recipes-app" element={<RecipesApp />}></Route>
       </Route>
     )
   )
 
   return (
     
-      <div className="App">
+      <div id="App">
         <header id="app-header">Header</header>
 
         <body id="app-body">
