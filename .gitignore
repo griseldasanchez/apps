@@ -24,3 +24,11 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
+
+#Firebase
+.env
+utils
+utils/connect.js
+utils/dataLoad.js
+utils/firebase.js
+utils/helpers.js
