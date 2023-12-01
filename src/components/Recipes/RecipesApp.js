@@ -1,26 +1,34 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+
+// Components
 import SearchRecipes from './SearchRecipes';
 import AllRecipes from './AllRecipes';
+
+// Styles
 import './AllRecipes.css';
 
 export default function RecipesApp() {
+
+  const informationUrl = useLoaderData();
+
   return (
    <div id="recipes-app">
-      {/* <div>This is the for the Recipes App.</div> */}
-      {/* <p>Features Needed</p> */}
 
       <SearchRecipes/>
 
       <div>List of recipes by category</div>
-      <AllRecipes />
+      <AllRecipes state={informationUrl}/>
 
-        <div>Recipe Component</div>
-        <div>Navigation bar within recipe - edit, delete, save, share</div>
-          <li>Name</li>
-          <li>Description</li>
-          <li>Image if it exists</li>
-          <li>Ingredients</li>
-          <li>Instructions</li>
    </div>
   )
+}
+
+export const dataLoader = () => {
+  const recipe = {
+    name: "Name of the Recipe",
+    description: "Here is a description for the current recipe on the tile."
+  }
+
+  return recipe;
 }
