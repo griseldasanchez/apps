@@ -17,7 +17,7 @@ export default function AllRecipes() {
     // Make an HTTP GET request to fetch recipes from your backend
     axios.get('http://localhost:3001/about')  // Change to the correct port
       .then(response => {
-        console.log('allRecipes in the statement');
+        console.log('allRecipes in the statement:');
         setRecipes(response.data);
       })
       .catch(error => {
@@ -29,8 +29,8 @@ export default function AllRecipes() {
     <div>
       <div className="search-header-name">Recipes:</div>
       <div className="recipes-grid-container">
-        {recipes.map(recipe => (
-          <div key={recipe.id}>
+        {recipes.map((recipe, index) => (
+          <div key={recipe.recipeId}>
             <RecipeTile recipe={recipe}/>
           </div>
         ))}
