@@ -25,7 +25,7 @@ const Sample = () => {
       <ul>
         {recipes.map(recipe => (
           <div key={recipe.recipe_id}>
-            <li>{recipe.title}</li>
+            <li>{recipe.recipeName}</li>
             <li>{recipe.description}</li>
           </div>
         ))}
