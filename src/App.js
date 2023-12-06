@@ -11,7 +11,6 @@ import { createBrowserRouter,
 import Home from './components/Home/Home';
 import About from './components/About';
 import RecipesApp from'./components/Recipes/RecipesApp';
-import { dataLoader } from './components/Recipes/RecipesApp';
 import Footer from './components/Footer/Footer';
 import RecipeDetails from './components/Recipes/RecipeDetails';
 // eslint-disable-next-line
@@ -20,10 +19,6 @@ import NavigationBar from './components/NavigationBar';
 // Styles
 import './App.css';
 
-// // Database
-// import { db } from './utils/firebase';
-// import { getDatabase, ref, set } from "firebase/database";
-
 function App() {
 
   const router = createBrowserRouter(
@@ -31,24 +26,11 @@ function App() {
       <Route path="/" element={<Root /> }>
         <Route index element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
-        <Route path="/recipes-app" element={<RecipesApp />} loader={dataLoader}></Route>
+        <Route path="/recipes-app" element={<RecipesApp />}></Route>
         <Route path="/recipe-details" element={<RecipeDetails />}></Route>
       </Route>
     )
   );
-
-  // let writeData = (recipeId, recipeName, cuisine, description, imageURL, ingredients, instructions) => {
-  //   const db = getDatabase();
-  //   const reference = ref(db, 'recipe/' + recipeId);
-  //    set(reference, {
-  //     recipeName: recipeName,
-  //     cuisine: cuisine,
-  //     description: description,
-  //     imageURL: imageURL,
-  //     ingredients: ingredients,
-  //     instructions: instructions
-  //   })
-  //  }
 
   return (
     
