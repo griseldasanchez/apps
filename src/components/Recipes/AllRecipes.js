@@ -11,11 +11,7 @@ export default function AllRecipes(state) {
     <div>
       <div className="search-header-name">Recipes:</div>
       <div className="recipes-grid-container">
-        <RecipeTile information={state}/>
-        <RecipeTile information={state}/>
-        <RecipeTile information={state}/>
-        <RecipeTile information={state}/>
-        <RecipeTile information={state}/>
+        <RecipeTile />
     </div>
     </div>
   );
