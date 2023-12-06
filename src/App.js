@@ -20,9 +20,9 @@ import NavigationBar from './components/NavigationBar';
 // Styles
 import './App.css';
 
-// Database
-import { db } from './utils/firebase';
-import { getDatabase, ref, set } from "firebase/database";
+// // Database
+// import { db } from './utils/firebase';
+// import { getDatabase, ref, set } from "firebase/database";
 
 function App() {
 
@@ -37,18 +37,18 @@ function App() {
     )
   );
 
-  let writeData = (recipeId, recipeName, cuisine, description, imageURL, ingredients, instructions) => {
-    const db = getDatabase();
-    const reference = ref(db, 'recipe/' + recipeId);
-     set(reference, {
-      recipeName: recipeName,
-      cuisine: cuisine,
-      description: description,
-      imageURL: imageURL,
-      ingredients: ingredients,
-      instructions: instructions
-    })
-   }
+  // let writeData = (recipeId, recipeName, cuisine, description, imageURL, ingredients, instructions) => {
+  //   const db = getDatabase();
+  //   const reference = ref(db, 'recipe/' + recipeId);
+  //    set(reference, {
+  //     recipeName: recipeName,
+  //     cuisine: cuisine,
+  //     description: description,
+  //     imageURL: imageURL,
+  //     ingredients: ingredients,
+  //     instructions: instructions
+  //   })
+  //  }
 
   return (
     
