@@ -15,7 +15,7 @@ export default function RecipeTile({ recipe }) {
   return (
     <div className="recipe-item" onClick={handleRecipeClick}>
       <div className="recipe-item">
-          <img src="/assets/images/pizza.jpg" className="recipe-thumbnail" alt="Recipe Thumbnail" />
+          <img src={recipe.imageURL} className="recipe-thumbnail" alt="Recipe Thumbnail" />
           <br />
           <b>{recipe.recipeName}</b>
           <br />

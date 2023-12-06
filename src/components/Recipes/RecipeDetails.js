@@ -34,7 +34,7 @@ export default function RecipeDetails() {
       </div>
 
       <div className="recipe-image">
-        <img src="/assets/images/pizza.jpg" className="recipe-thumbnail" alt="Recipe Thumbnail" />
+        <img src={state.imageURL} className="recipe-thumbnail" alt="Recipe Thumbnail" />
       </div>
 
       <div className="recipe-ingredients-instructions">
