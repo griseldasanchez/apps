@@ -7,6 +7,7 @@ const Sample = () => {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
+    console.log('window.location', window.location);
     // Make an HTTP GET request to fetch recipes from your backend
     axios.get('http://localhost:3001/about')  // Change to the correct port
       .then(response => {
@@ -24,8 +25,8 @@ const Sample = () => {
       <h2>Recipe List</h2>
       <ul>
         {recipes.map(recipe => (
-          <div key={recipe.recipe_id}>
-            <li>{recipe.title}</li>
+          <div key={recipe.recipeId}>
+            <li>{recipe.recipeName}</li>
             <li>{recipe.description}</li>
           </div>
         ))}

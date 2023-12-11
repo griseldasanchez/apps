@@ -1,22 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 // Styles
-import './AllRecipes';
+import './AllRecipes.css';
 
-export default function RecipeTile(  ) {
-  
+export default function RecipeTile({ recipe }) {
+  const navigate = useNavigate();
+
+  const handleRecipeClick = () => {
+    console.log('RecipeTile handleRecipeClick item selected:', recipe);
+    navigate('/recipe-details', { state: recipe });
+  };
+
   return (
-    <div>
-      <Link to={{ pathname: '/recipe-details' }} className="recipe-link">
-        <div className="recipe-item">
-          <img src="/assets/images/pizza.jpg" className="recipe-thumbnail" alt="Recipe Thumbnail" />
+    <div className="recipe-item" onClick={handleRecipeClick}>
+      <div className="recipe-item">
+          <img src={recipe.imageURL} className="recipe-thumbnail" alt="Recipe Thumbnail" />
           <br />
-          Name Sample
+          <b>{recipe.recipeName}</b>
           <br />
-        Information description sample
-        </div>
-      </Link>
+          {recipe.description}
+      </div>
     </div>
-  )
+  );
 }
