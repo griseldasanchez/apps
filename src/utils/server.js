@@ -28,7 +28,7 @@ app.get('/about', (req, res) => {
   db.execute('SELECT * FROM recipes')
     .then(([rows]) => {
       res.json(rows);
-      console.log('/about', rows);
+      // console.log('/about', rows);
     })
     .catch((err) => {
       console.error('Error fetching recipes:', err);

@@ -5,13 +5,18 @@ import axios from 'axios';
 
 const Sample = () => {
   const [recipes, setRecipes] = useState([]);
-  const currentURL = window.location.href.slice(0,22);
-console.log('currentURL', currentURL);
+  const currentURL = window.location.href.split('/');
+  const userURL = currentURL[2].split(':');
+  const currentUser = userURL[0];
+  
+  console.log('currentURL', currentURL);
+  console.log('userURL', currentUser);
+  
 
   useEffect(() => {
     console.log('window.location', window);
     // Make an HTTP GET request to fetch recipes from your backend
-    axios.get(`http://localhost:3000/about`)  // Change to the correct port
+    axios.get(`http://${currentUser}:3000/about`)  // Change to the correct port
       .then(response => {
         console.log('in then');
         setRecipes(response.data);
