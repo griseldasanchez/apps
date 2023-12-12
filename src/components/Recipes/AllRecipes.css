@@ -1,9 +1,8 @@
 /* Recipes App Container */
 #recipes-app {
-  /* width: 100%; */
   overflow-x: hidden; /* hides horizontal scrollbar */
   overflow-y: hidden; /* hides vertical scrollbar */
-  /* padding: 1%; */
+  padding: 0% 1%;
   border: 3px dashed purple;
 }
 
@@ -76,28 +75,30 @@
 }
 
 .recipe-details .recipe-name  {
-  width: 100%;
+  width: 98%;
   border: 1px solid purple;
   font-size: 1.5rem;
   margin: 1%;
 }
 
 .recipe-details .recipe-description {
-  width: 100%;
+  width: 98%;
   border: 2px solid orange;
   margin: 1%;
 }
 
-.recipe-details .recipe-image {
+.image-ingredients {
+  display: flex;
+}
+
+.image-ingredients .recipe-image {
   width: 100%;
   border: 2px solid lawngreen;
-  display: inline-block;
   margin: 1%;
 }
 
 .recipe-details img {
-  max-width: 40%;
-  display: inline-block;
+  max-width: 50%;
   margin: 1%;
 }
 
@@ -108,20 +109,21 @@
   margin: 1%;
 }
 
-.recipe-details .recipe-ingredients-instructions .ingredients-list > ul {
+.recipe-details .image-ingredients .ingredients-list > div {
   text-align: left;
+  margin-left: 2%;
  }
 
 .recipe-details .recipe-ingredients {
-  width: 35%;
-  border: 1px solid white;
+  width: 60%;
+  border: 1px solid violet;
   margin: 1%;
 }
 
 .recipe-details .recipe-instructions {
-  width: 65%;
+  width: 98%;
   border: 1px solid blue;
-  margin: 1%;
+  margin: 0% 1%;
 }
 
 .recipe-details .recipe-instructions .instructions-list > ol {
