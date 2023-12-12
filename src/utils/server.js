@@ -2,14 +2,13 @@ require('dotenv').config(); // Load environment variables from .env file
 
 const express = require('express');
 const cors = require('cors');
-const { connection, db } = require('./db'); // Import the database module
+const { db } = require('./db'); // Import the database module
 
 const app = express();
 
 app.use(cors());
 
-const PORT = process.env.PORT || 3000;
-const BASE_URL = process.env.BASE_URL;
+const PORT = process.env.PORT || 3001;
 
 app.get('/', (req, res) => {
   res.json({
@@ -29,6 +28,7 @@ app.get('/about', (req, res) => {
   db.execute('SELECT * FROM recipes')
     .then(([rows]) => {
       res.json(rows);
+      console.log('/about', rows);
     })
     .catch((err) => {
       console.error('Error fetching recipes:', err);
@@ -48,5 +48,5 @@ app.get('/allRecipes', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on ${BASE_URL}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });

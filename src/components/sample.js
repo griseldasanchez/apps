@@ -7,9 +7,9 @@ const Sample = () => {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    console.log('window.location', window.location);
+    console.log('window.location', window);
     // Make an HTTP GET request to fetch recipes from your backend
-    axios.get('http://localhost:3001/about')  // Change to the correct port
+    axios.get('/about')  // Change to the correct port
       .then(response => {
         console.log('in then');
         setRecipes(response.data);
