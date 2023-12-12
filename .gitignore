@@ -27,5 +27,5 @@ yarn-error.log*
 
 #AWS RDS Database
 .env
-utils
-utils/db.js
+src/utils/db.js
+src/utils/schema.sql
