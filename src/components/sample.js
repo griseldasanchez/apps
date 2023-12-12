@@ -5,11 +5,13 @@ import axios from 'axios';
 
 const Sample = () => {
   const [recipes, setRecipes] = useState([]);
+  const currentURL = window.location.href.slice(0,22);
+console.log('currentURL', currentURL);
 
   useEffect(() => {
     console.log('window.location', window);
     // Make an HTTP GET request to fetch recipes from your backend
-    axios.get('/about')  // Change to the correct port
+    axios.get(`http://localhost:3000/about`)  // Change to the correct port
       .then(response => {
         console.log('in then');
         setRecipes(response.data);

@@ -12,10 +12,12 @@ import './AllRecipes.css';
 export default function AllRecipes() {
 
   const [recipes, setRecipes] = useState([]);
+  const currentURL = window.location.href.slice(0,22);
+console.log('currentURL', currentURL);
   
   useEffect(() => {
     // Make an HTTP GET request to fetch recipes from your backend
-    axios.get(`http://localhost:3005/allRecipes`)
+    axios.get(`http://localhost:3000/allRecipes`)
       .then(response => {
         console.log('allRecipes in the statement:');
         setRecipes(response.data);
