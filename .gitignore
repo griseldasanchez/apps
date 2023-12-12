@@ -26,6 +26,5 @@ yarn-error.log*
 .netlify
 
 #AWS RDS Database
-.env
-src/utils/db.js
+.env 
 src/utils/schema.sql
