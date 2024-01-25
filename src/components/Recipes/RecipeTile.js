@@ -13,14 +13,18 @@ export default function RecipeTile({ recipe }) {
   };
 
   return (
-    <div className="recipe-item" onClick={handleRecipeClick}>
+    <div onClick={handleRecipeClick}>
       <div className="recipe-item">
-          <img src={recipe.imageURL} className="recipe-thumbnail" alt="Recipe Thumbnail" />
-          <br />
-          <b>{recipe.recipeName}</b>
-          <br />
-          {recipe.description}
-      </div>
+        <div className="test">
+          <div className="recipe-image-box"> 
+            <img src={recipe.imageURL} className="recipe-thumbnail" alt="Recipe Thumbnail" />
+          </div>
+        </div>
+            <p>
+              <b>{recipe.recipeName}</b>
+            </p>          
+            {recipe.description}
+        </div>
     </div>
   );
 }

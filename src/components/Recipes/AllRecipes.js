@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
 import axios from 'axios';
-
 
 // Components
 import RecipeTile from './RecipeTile';
