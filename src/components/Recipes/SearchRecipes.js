@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
+import updateSearchTerm from './AllRecipes.js';
 
 export default function SearchRecipes() {
 
-  const [searchTerm, setSearchTerm] = useState("");
+  // const [searchTerm, setSearchTerm] = useState("");
 
-  const updateSearchTerm = (e) => {    
-    setSearchTerm(e.target.value);
-  }
+  // const updateSearchTerm = (e) => {    
+  //   setSearchTerm(e.target.value);
+  // }
 
   const filterRecipes = () => {
-    console.log('Filter recipes.', searchTerm);
+    console.log('Filter recipes.');
   }
 
   return (
