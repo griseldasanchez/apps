@@ -12,7 +12,7 @@ export default function RecipesApp() {
   return (
    <div id="recipes-app">
 
-      <SearchRecipes/>
+      {/* <SearchRecipes/> */}
 
       <div>List of recipes by category</div>
       <AllRecipes/>

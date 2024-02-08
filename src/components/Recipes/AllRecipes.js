@@ -39,7 +39,7 @@ export default function AllRecipes() {
       .catch(error => {
         console.error('Error fetching recipes:', error);
       });
-  }, [recipes]);
+  }, [searchTerm]);
 
   const updateSearchTerm = (e) => {  
     console.log('in update', e.target.value);  
