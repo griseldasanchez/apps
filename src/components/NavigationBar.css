@@ -1,9 +1,9 @@
 #navigation-bar {
   width: 100%;
   background-color: white;
-  padding: 1%;
+  padding: 1.5%;
   overflow: hidden;
-  margin: 0.5% 0%;
+  margin: 0% 0%;
 }
 
 #navigation-bar a {

@@ -33,32 +33,35 @@ export default function RecipeDetails() {
         {state.description}
       </div>
 
-      <div className="recipe-image">
-        <img src={state.imageURL} className="recipe-thumbnail" alt="Recipe Thumbnail" />
-      </div>
-
-      <div className="recipe-ingredients-instructions">
-        <div className="recipe-ingredients">
-          <b>Ingredients</b>
-          <div className="ingredients-list">
-            {state.ingredients.map((item, index) => (
-              <div key={index}>{item}</div>
-            ))}
-          </div>
-        </div>
-
-        <div className="recipe-instructions">
-          <b>Instructions</b>
-          <div className="instructions-list">
-            <ol>
-              {state.instructions.map((item, index) => (
-                <li key={index}>{item}</li>
+      <div className="image-ingredients">
+        <div className="recipe-image">
+          <img src={state.imageURL} className="recipe-thumbnail" alt="Recipe Thumbnail" />
+              </div>
+          <div className="recipe-ingredients">
+            <p>
+              <b>Ingredients</b>
+            </p>
+            <div className="ingredients-list">
+              {state.ingredients.map((item, index) => (
+                <div key={index}>{item}</div>
               ))}
-            </ol>
-          </div>
+            </div>
         </div>
       </div>
 
+
+      <div className="recipe-instructions">
+        <p>
+          <b>Instructions</b>
+        </p>
+        <div className="instructions-list">
+          <ol>
+            {state.instructions.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ol>
+        </div>
+      </div>
     </div>
   )
 }
